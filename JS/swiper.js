@@ -25,3 +25,5 @@ var swiper = new Swiper(".slide-product", {
   },
   loop: true,
 });
+
+/* swiper Appliances */

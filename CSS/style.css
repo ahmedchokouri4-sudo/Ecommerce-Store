@@ -8,7 +8,11 @@
     text-decoration: none;
     font-family: "inter" , sans-serif;
     color: var(--color_heading);
+    
 }
+
+
+
 :root{
     --main_color: #ff8716;
     --p_color: #7b7b7b;
@@ -21,6 +25,7 @@
 
 body{
     padding-top: 220px;
+    
 }
 
 span{
@@ -624,6 +629,16 @@ header .bottom-header .category-nav .category-nav-list a:hover{
     transition: 0.3s;
     border: 1px solid var(--main_color);
     font-size: 14px;
+}
+
+.product .icons .btn-add-cart.active{
+    color: var(--color_heading);
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.product .icons .btn-add-cart.active i{
+    color: var(--main_color);
 }
 
 .product .icons .btn-add-cart i{

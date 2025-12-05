@@ -78,6 +78,8 @@
        <div class="bottom-header">
         <div class="container">
             <nav class="nav">
+
+                <span   class="open-menu"  onclick="open_menu()" ><i class="fa-solid fa-bars"></i></span>
                 <div class="category-nav">
                     <div onclick="open_category_list()"  class="category-btn">
                         <div class="category-nav-list">
@@ -96,13 +98,15 @@
                     </div>
 
                 </div>
-                <ul class="nav-links">
+                <ul class="nav-links">  
+                    <span  onclick="open_menu()" class="close-menu"><i class="fa-regular fa-circle-xmark"></i></span>
+
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Accesories</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
-                </ul>
+                </ul>  
             </nav>
             <div class="login-signup btns">
                 <a href="#"class="btn">Login <i class="fa-solid fa-right-to-bracket"></i></a>

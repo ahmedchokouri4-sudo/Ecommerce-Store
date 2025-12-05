@@ -24,6 +24,21 @@ var swiper = new Swiper(".slide-product", {
     prevEl: ".swiper-button-prev",
   },
   loop: true,
+  breakpoints: {
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+    700: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+  },
 });
-
-/* swiper Appliances */

@@ -51,6 +51,12 @@ cartItemsContainer = "";
 function updateCart() {
   const cartItemsContainer = document.getElementById("cart_items");
 
+  const checkout_items = document.getElementById("checkout_items");
+
+  if (checkout_items) {
+    checkout_items.innerHTML = "";
+  }
+
   var total_price = 0;
   var total_count = 0;
 
@@ -77,6 +83,36 @@ function updateCart() {
             </div>
     
     `;
+
+    if (checkout_items) {
+      checkout_items.innerHTML += `
+      
+      <div class="item_cart">
+
+                            <div class="image_name">
+                                <img src="${item.img}" alt="">
+
+                                <div class="content">
+                                    <h4>Lorem ipsum dolor sit.</h4>
+                                    <p class="price_cart">$${total_price_item}</p>
+                                    <div class="quantity_control">
+                                        <button class="decrease_quantity" data-index=${index}>-</button>
+                                        <span class="quantity">${item.quantity}</span>
+                                        <button class="increase_quantity" data-index=${index}>+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button class="delete_item" data-index="${index}"><i class="fa-solid fa-trash-can"></i></button>
+
+
+
+                        </div>
+      
+      
+      `;
+    }
   });
 
   const price_cart_total = document.querySelector(".price-cart-total");
@@ -86,6 +122,13 @@ function updateCart() {
   price_cart_total.innerHTML = `$${total_price}`;
   Count_item_cart.innerHTML = total_count;
   count_itm_header.innerHTML = total_count;
+  if (checkout_items) {
+    const subtotal_checkout = document.querySelector(".subtotal_checkout");
+    const total_checkout = document.querySelector(".total_checkout");
+
+    subtotal_checkout.innerHTML = `$${total_price}`;
+    total_checkout.innerHTML = `$${total_price + 20}`;
+  }
   const increaseButtons = document.querySelectorAll(".increase-quantity");
   const decreaseButtons = document.querySelectorAll(".decrease-quantity");
 
@@ -103,8 +146,40 @@ function updateCart() {
     });
   });
 
+  // CHECKOUT INCREASE / DECREASE
+  const increaseButtonsCheckout =
+    document.querySelectorAll(".increase_quantity");
+  const decreaseButtonsCheckout =
+    document.querySelectorAll(".decrease_quantity");
+
+  increaseButtonsCheckout.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const itemIndex = event.target.getAttribute("data-index");
+      increaseQuantity(itemIndex);
+    });
+  });
+
+  decreaseButtonsCheckout.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const itemIndex = event.target.getAttribute("data-index");
+      decreaseQuantity(itemIndex);
+    });
+  });
+
   const deleteButtons = document.querySelectorAll(".delete-item");
   deleteButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const itemIndex = event.target
+        .closest("button")
+        .getAttribute("data-index");
+      removefromeCart(itemIndex);
+    });
+  });
+
+  // DELETE INSIDE CHECKOUT PAGE
+  const deleteButtonsCheckout = document.querySelectorAll(".delete_item");
+
+  deleteButtonsCheckout.forEach((button) => {
     button.addEventListener("click", (event) => {
       const itemIndex = event.target
         .closest("button")

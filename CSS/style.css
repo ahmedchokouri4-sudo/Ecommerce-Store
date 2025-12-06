@@ -1219,6 +1219,7 @@ body{
 
 /* checkout page */ 
 
+
 .checkout{
     margin: 50px 0;
 }
@@ -1232,16 +1233,16 @@ body{
 .checkout .ordersummary{
     width: 45%;
     padding: 0 20px;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--border_color);
     border-radius: 5px;
     box-shadow: 0px 8px 10px #c0bfbf44;
 }
 
 .checkout .ordersummary h1{
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border_color);
     padding: 20px 0;
     margin-bottom: 20px;
-    color: var(--main-color);
+    color: var(--main_color);
 }
 
 .checkout .ordersummary .items{
@@ -1249,29 +1250,29 @@ body{
     overflow-y: auto;
 }
 
-.checkout .ordersummary .item-cart{
+.checkout .ordersummary .item_cart{
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: space-between;
     height: 125px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border_color);
     padding-right: 20px;
 }
-.checkout .ordersummary .item-cart:last-child{
+.checkout .ordersummary .item_cart:last-child{
     border-bottom: 0;
 }
 
-.checkout .ordersummary .item-cart .image-name{
+.checkout .ordersummary .item_cart .image_name{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.checkout .ordersummary .item-cart img{
+.checkout .ordersummary .item_cart img{
     width: 80px;
 }
-.checkout .ordersummary .item-cart  h4{
+.checkout .ordersummary .item_cart  h4{
     margin-bottom: 10px;
     font-size: 14px;
     overflow: hidden;
@@ -1281,35 +1282,35 @@ body{
     -webkit-box-orient: vertical;
 }
 
-.checkout .ordersummary  .delete-item i{
+.checkout .ordersummary  .delete_item i{
     font-size: 22px;
     cursor: pointer;
     transition: 0.3s;
 }
-.checkout .ordersummary  .delete-item i:hover{
+.checkout .ordersummary  .delete_item i:hover{
     color: #E51A1A;
     scale: 1.1;
 }
 
-.checkout .ordersummary .quantity-control{
+.checkout .ordersummary .quantity_control{
     display: flex;
     align-items: center;
     gap: 5px;
     margin-top: 5px;
 }
 
-.checkout .ordersummary .quantity-control span{
+.checkout .ordersummary .quantity_control span{
     font-size: 18px;
     min-width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bg-color);
+    background: var(--bg_color);
     padding: 3px 0;
 
 }
 
-.checkout .ordersummary .quantity-control button{
+.checkout .ordersummary .quantity_control button{
     width: 27px;
     height: 27px;
     display: flex;
@@ -1318,43 +1319,43 @@ body{
     cursor: pointer;
     font-size: 20px;
     border-radius: 2px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border_color);
 }
 
 
-.checkout .ordersummary .bottom-summary{
-    border-top: 1px solid var(--border-color);
+.checkout .ordersummary .bottom_summary{
+    border-top: 1px solid var(--border_color);
     padding-top: 25PX;
 }
-.checkout .ordersummary .shop-table{
+.checkout .ordersummary .shop_table{
     margin-bottom: 20PX;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.checkout .ordersummary .shop-table p{
+.checkout .ordersummary .shop_table p{
     font-size: 20px;
-    color: var(--color-heading);
+    color: var(--color_heading);
     text-transform: capitalize;
 }
 
-.checkout .ordersummary .shop-table  span{
+.checkout .ordersummary .shop_table  span{
     font-weight: bold;
     font-size: 20px;
 }
 
-.checkout .ordersummary .button-div{
-    border-top: 1px solid var(--border-color);
+.checkout .ordersummary .button_div{
+    border-top: 1px solid var(--border_color);
     padding: 30px 0;
 }
 
 
-.checkout .ordersummary .button-div button{
+.checkout .ordersummary .button_div button{
     width: 100%;
-    background: var(--main-color);
-    color: var(--white-color);
-    border: 2px solid var(--main-color);
+    background: var(--main_color);
+    color: var(--white_color);
+    border: 2px solid var(--main_color);
     padding: 15px 0;
     outline: none;
     border-radius: 3px;
@@ -1363,8 +1364,104 @@ body{
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.checkout .ordersummary .button-div button:hover{
+.checkout .ordersummary .button_div button:hover{
     background: transparent;
-    color: var(--main-color);
+    color: var(--main_color);
+}
+
+.checkout .input_info{
+    width: 45%;
+}
+
+.checkout .input_info h2{
+    padding: 10px 20px ;
+    background: var(--main_color);
+    text-transform: capitalize;
+    color: var(--white_color);
+}
+
+.checkout .input_info .adress,
+.checkout .input_info .coupon{
+    margin-bottom: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border_color);
+    box-shadow: 0px 8px 10px #c0bfbf44;
+}
+
+.checkout .input_info .coupon .btn_coupon{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.checkout .input_info .coupon .btn_coupon button{
+    width: 50%;
+    background: var(--main_color);
+    color: var(--white_color);
+    border: 2px solid var(--main_color);
+    padding: 12px 0;
+    outline: none;
+    border-radius: 2px ;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.checkout .input_info .coupon .btn_coupon button:hover{
+    background: transparent;
+    color: var(--main_color);
+}
+
+.checkout .input_info .inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px ;
+}
+
+.checkout .input_info .inputs label{
+    color: var(--color_heading);
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.checkout .input_info .inputs input{
+    margin: 8px 0 22px;
+    padding: 15px 10px ;
+    outline: none;
+    border: 1px solid var(--border_color);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.checkout .input_info .inputs input:focus{
+    border-color: var(--main_color);
+}
+
+/* responsive check out page  */
+@media(max-width:1000px){
+
+    .checkout .container{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .checkout .ordersummary,
+    .checkout .input_info{
+        width: 80%;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+   .checkout .ordersummary,
+    .checkout .input_info{
+        width: 100%;
+    }
+    .checkout .input_info h2 {
+        font-size: 20px;
+    }
+
+    
 }
 
